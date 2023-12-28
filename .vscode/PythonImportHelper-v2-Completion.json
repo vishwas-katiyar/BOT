@@ -1,0 +1,270 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "system",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "concurrent.futures",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "system",
+        "importPath": "platform",
+        "description": "platform",
+        "isExtraImport": true,
+        "detail": "platform",
+        "documentation": {}
+    },
+    {
+        "label": "Options",
+        "importPath": "selenium.webdriver.chrome.options",
+        "description": "selenium.webdriver.chrome.options",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.options",
+        "documentation": {}
+    },
+    {
+        "label": "Options",
+        "importPath": "selenium.webdriver.chrome.options",
+        "description": "selenium.webdriver.chrome.options",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.options",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.service",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.service",
+        "documentation": {}
+    },
+    {
+        "label": "WebDriver",
+        "importPath": "selenium.webdriver.chrome.webdriver",
+        "description": "selenium.webdriver.chrome.webdriver",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.webdriver",
+        "documentation": {}
+    },
+    {
+        "label": "WebDriver",
+        "importPath": "selenium.webdriver.chrome.webdriver",
+        "description": "selenium.webdriver.chrome.webdriver",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.webdriver",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "clear",
+        "kind": 2,
+        "importPath": "proxy",
+        "description": "proxy",
+        "peekOfCode": "def clear():\n    if current_os() == 'Windows': system('cls')\n    else: system('clear')\n# www.free-proxy.cz proxy list URLs\nurls = [\n    'http://free-proxy.cz/en/proxylist/country/all/https/ping/all',\n    'http://free-proxy.cz/en/proxylist/country/all/https/uptime/all',\n    'http://free-proxy.cz/en/proxylist/country/all/https/speed/all'\n]\n# setting webdriver options",
+        "detail": "proxy",
+        "documentation": {}
+    },
+    {
+        "label": "getProxy",
+        "kind": 2,
+        "importPath": "proxy",
+        "description": "proxy",
+        "peekOfCode": "def getProxy(url):\n    service = ChromeService(executable_path='./chromedriver.exe')\n    driver = Chrome(options=options, service=service)\n    driver.get(url)\n    driver.find_element(By.XPATH, '//*[@id=\"clickexport\"]').click()\n    proxylist = driver.find_element(By.XPATH, '//*[@id=\"zkzk\"]')\n    global proxies\n    proxies.extend(proxylist.text.splitlines())\n    driver.quit()\nclear()",
+        "detail": "proxy",
+        "documentation": {}
+    },
+    {
+        "label": "urls",
+        "kind": 5,
+        "importPath": "proxy",
+        "description": "proxy",
+        "peekOfCode": "urls = [\n    'http://free-proxy.cz/en/proxylist/country/all/https/ping/all',\n    'http://free-proxy.cz/en/proxylist/country/all/https/uptime/all',\n    'http://free-proxy.cz/en/proxylist/country/all/https/speed/all'\n]\n# setting webdriver options\noptions = ChromeOptions()\noptions.add_argument('-headless')\n# getting all proxies\nproxies = []",
+        "detail": "proxy",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 5,
+        "importPath": "proxy",
+        "description": "proxy",
+        "peekOfCode": "options = ChromeOptions()\noptions.add_argument('-headless')\n# getting all proxies\nproxies = []\ndef getProxy(url):\n    service = ChromeService(executable_path='./chromedriver.exe')\n    driver = Chrome(options=options, service=service)\n    driver.get(url)\n    driver.find_element(By.XPATH, '//*[@id=\"clickexport\"]').click()\n    proxylist = driver.find_element(By.XPATH, '//*[@id=\"zkzk\"]')",
+        "detail": "proxy",
+        "documentation": {}
+    },
+    {
+        "label": "proxies",
+        "kind": 5,
+        "importPath": "proxy",
+        "description": "proxy",
+        "peekOfCode": "proxies = []\ndef getProxy(url):\n    service = ChromeService(executable_path='./chromedriver.exe')\n    driver = Chrome(options=options, service=service)\n    driver.get(url)\n    driver.find_element(By.XPATH, '//*[@id=\"clickexport\"]').click()\n    proxylist = driver.find_element(By.XPATH, '//*[@id=\"zkzk\"]')\n    global proxies\n    proxies.extend(proxylist.text.splitlines())\n    driver.quit()",
+        "detail": "proxy",
+        "documentation": {}
+    },
+    {
+        "label": "proxies",
+        "kind": 5,
+        "importPath": "proxy",
+        "description": "proxy",
+        "peekOfCode": "proxies = list(set(proxies))\nprint('[***]\\tTotal Proxies Found :', len(proxies))\n# writing proxies to file\nwith open('proxy-list.txt', 'w+') as f:\n    for i in range(len(proxies)):\n        f.write(proxies[i]+'\\n')\nprint('[DONE]\\tGenerated \"proxy-list.txt\"')",
+        "detail": "proxy",
+        "documentation": {}
+    },
+    {
+        "label": "getViews",
+        "kind": 2,
+        "importPath": "viewbot",
+        "description": "viewbot",
+        "peekOfCode": "def getViews(proxy):\n    options = ChromeOptions()\n    options.add_experimental_option(\"excludeSwitches\", [\"enable-automation\"])\n    options.add_experimental_option(\"excludeSwitches\", [\"enable-logging\"])\n    options.add_argument('--proxy-server=%s' %proxy)\n    options.add_argument('--window-size=640,480')\n    try:\n        service = ChromeService(executable_path='./chromedriver.exe')\n        driver = Chrome(options=options, service=service)\n        driver.get(url)",
+        "detail": "viewbot",
+        "documentation": {}
+    }
+]
