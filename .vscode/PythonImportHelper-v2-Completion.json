@@ -43,6 +43,30 @@
         "documentation": {}
     },
     {
+        "label": "Scrapper",
+        "importPath": "Proxy_List_Scrapper",
+        "description": "Proxy_List_Scrapper",
+        "isExtraImport": true,
+        "detail": "Proxy_List_Scrapper",
+        "documentation": {}
+    },
+    {
+        "label": "Proxy",
+        "importPath": "Proxy_List_Scrapper",
+        "description": "Proxy_List_Scrapper",
+        "isExtraImport": true,
+        "detail": "Proxy_List_Scrapper",
+        "documentation": {}
+    },
+    {
+        "label": "ScrapperException",
+        "importPath": "Proxy_List_Scrapper",
+        "description": "Proxy_List_Scrapper",
+        "isExtraImport": true,
+        "detail": "Proxy_List_Scrapper",
+        "documentation": {}
+    },
+    {
         "label": "concurrent.futures",
         "kind": 6,
         "isExtraImport": true,
@@ -202,6 +226,33 @@
         "description": ".venv.Scripts.activate_this",
         "peekOfCode": "sys.prefix = base",
         "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "save_to_file",
+        "kind": 2,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "def save_to_file(proxies, filename='proxy-list.txt'):\n    with open(filename, 'w') as file:\n        for proxy in proxies:\n            file.write(proxy + '\\n')\nsave_to_file(formatted_proxies)\nprint(f\"Proxies saved to 'proxy-list.txt'\")",
+        "detail": "p",
+        "documentation": {}
+    },
+    {
+        "label": "scrapper",
+        "kind": 5,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "scrapper = Scrapper(category='ALL', print_err_trace=False)\nformatted_proxies=[]\ndata = scrapper.getProxies()\nfor item in data.proxies:\n    a = '{}:{}'.format(item.ip, item.port)\n    formatted_proxies.append(a)\n# formatted_proxies = [f\"{proxy['ip']}:{proxy['port']}\" for proxy in data.proxies]\ndef save_to_file(proxies, filename='proxy-list.txt'):\n    with open(filename, 'w') as file:\n        for proxy in proxies:",
+        "detail": "p",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "data = scrapper.getProxies()\nfor item in data.proxies:\n    a = '{}:{}'.format(item.ip, item.port)\n    formatted_proxies.append(a)\n# formatted_proxies = [f\"{proxy['ip']}:{proxy['port']}\" for proxy in data.proxies]\ndef save_to_file(proxies, filename='proxy-list.txt'):\n    with open(filename, 'w') as file:\n        for proxy in proxies:\n            file.write(proxy + '\\n')\nsave_to_file(formatted_proxies)",
+        "detail": "p",
         "documentation": {}
     },
     {
