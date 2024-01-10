@@ -43,6 +43,107 @@
         "documentation": {}
     },
     {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "ActionChains",
+        "importPath": "selenium.webdriver.common.action_chains",
+        "description": "selenium.webdriver.common.action_chains",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.action_chains",
+        "documentation": {}
+    },
+    {
+        "label": "concurrent.futures",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
         "label": "Scrapper",
         "importPath": "Proxy_List_Scrapper",
         "description": "Proxy_List_Scrapper",
@@ -64,15 +165,6 @@
         "description": "Proxy_List_Scrapper",
         "isExtraImport": true,
         "detail": "Proxy_List_Scrapper",
-        "documentation": {}
-    },
-    {
-        "label": "concurrent.futures",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "detail": "concurrent.futures",
         "documentation": {}
     },
     {
@@ -129,31 +221,6 @@
         "description": "selenium.webdriver.chrome.webdriver",
         "isExtraImport": true,
         "detail": "selenium.webdriver.chrome.webdriver",
-        "documentation": {}
-    },
-    {
-        "label": "By",
-        "importPath": "selenium.webdriver.common.by",
-        "description": "selenium.webdriver.common.by",
-        "isExtraImport": true,
-        "detail": "selenium.webdriver.common.by",
-        "documentation": {}
-    },
-    {
-        "label": "By",
-        "importPath": "selenium.webdriver.common.by",
-        "description": "selenium.webdriver.common.by",
-        "isExtraImport": true,
-        "detail": "selenium.webdriver.common.by",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -226,6 +293,33 @@
         "description": ".venv.Scripts.activate_this",
         "peekOfCode": "sys.prefix = base",
         "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "perform_test",
+        "kind": 2,
+        "importPath": "autoclick",
+        "description": "autoclick",
+        "peekOfCode": "def perform_test(url):\n    driver = webdriver.Chrome()  # You can use other browsers by changing this line accordingly\n    driver.get(url)\n    clickable_elements = driver.find_elements(By.XPATH, '//*[self::a or self::button]')\n    selected_element = random.choice(clickable_elements)\n    actions = ActionChains(driver)\n    actions.move_to_element(selected_element).perform()\n    selected_element.click()\n    driver.quit()\nif __name__ == \"__main__\":",
+        "detail": "autoclick",
+        "documentation": {}
+    },
+    {
+        "label": "open_url_multiple_users",
+        "kind": 2,
+        "importPath": "hit",
+        "description": "hit",
+        "peekOfCode": "def open_url_multiple_users(url, num_users=50, delay_seconds=5):\n    for user_id in range(1, num_users + 1):\n        print(f\"Opening {url} for User {user_id}\")\n        subprocess.Popen(['python', '-m', 'webbrowser', url])\n        time.sleep(delay_seconds)\nif __name__ == \"__main__\":\n    target_url = 'https://mihir-music.vercel.app/'\n    open_url_multiple_users(target_url)",
+        "detail": "hit",
+        "documentation": {}
+    },
+    {
+        "label": "get_proxy_list",
+        "kind": 2,
+        "importPath": "hitproxy",
+        "description": "hitproxy",
+        "peekOfCode": "def get_proxy_list():\n    url = 'https://www.free-proxy-list.net/'\n    response = requests.get(url)\n    if response.status_code == 200:\n        soup = BeautifulSoup(response.text, 'html.parser')\n        proxy_list = []\n        # print(soup)\n        for row in soup.find_all('tr')[1:]:\n            try:\n                columns = row.find_all('td')",
+        "detail": "hitproxy",
         "documentation": {}
     },
     {
@@ -314,7 +408,7 @@
         "kind": 2,
         "importPath": "viewbot",
         "description": "viewbot",
-        "peekOfCode": "def getViews(proxy):\n    options = ChromeOptions()\n    options.add_experimental_option(\"excludeSwitches\", [\"enable-automation\"])\n    options.add_experimental_option(\"excludeSwitches\", [\"enable-logging\"])\n    options.add_argument('--proxy-server=%s' %proxy)\n    options.add_argument('--window-size=640,480')\n    try:\n        service = ChromeService(executable_path='./chromedriver.exe')\n        driver = Chrome(options=options, service=service)\n        driver.get(url)",
+        "peekOfCode": "def getViews(proxy):\n    options = ChromeOptions()\n    options.add_experimental_option(\"excludeSwitches\", [\"enable-automation\"])\n    options.add_experimental_option(\"excludeSwitches\", [\"enable-logging\"])\n    # options.add_argument('--proxy-server=%s' %proxy)\n    options.add_argument('--window-size=640,480')\n    try:\n        service = ChromeService(executable_path='./chromedriver.exe')\n        driver = Chrome(options=options, service=service)\n        driver.get(url)",
         "detail": "viewbot",
         "documentation": {}
     }

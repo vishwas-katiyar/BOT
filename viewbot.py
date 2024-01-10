@@ -27,7 +27,7 @@ def getViews(proxy):
     options = ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    options.add_argument('--proxy-server=%s' %proxy)
+    # options.add_argument('--proxy-server=%s' %proxy)
     options.add_argument('--window-size=640,480')
 
     try:
