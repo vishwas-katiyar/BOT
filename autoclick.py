@@ -37,7 +37,7 @@ def perform_test(url, iteration):
     print(f"Iteration {iteration} completed.")
 
 if __name__ == "__main__":
-    url = "https://example.com"  # Replace this with the URL you want to test
+    url = "https://mihir-music.vercel.app/"  # Replace this with the URL you want to test
     num_iterations = 500
 
     with ThreadPoolExecutor() as executor:
