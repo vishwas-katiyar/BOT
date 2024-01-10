@@ -93,14 +93,6 @@
         "documentation": {}
     },
     {
-        "label": "ActionChains",
-        "importPath": "selenium.webdriver.common.action_chains",
-        "description": "selenium.webdriver.common.action_chains",
-        "isExtraImport": true,
-        "detail": "selenium.webdriver.common.action_chains",
-        "documentation": {}
-    },
-    {
         "label": "concurrent.futures",
         "kind": 6,
         "isExtraImport": true,
@@ -300,7 +292,7 @@
         "kind": 2,
         "importPath": "autoclick",
         "description": "autoclick",
-        "peekOfCode": "def perform_test(url):\n    options = webdriver.ChromeOptions()\n    options.add_argument('--start-maximized')  # Maximize the browser window\n    driver = webdriver.Chrome(options=options)\n    driver.get(url)\n    # Wait for the page to load\n    time.sleep(2)\n    # Step 2: Open 5 new tabs\n    for _ in range(4):\n        driver.execute_script(\"window.open('about:blank', '_blank');\")",
+        "peekOfCode": "def perform_test(url, iteration):\n    options = webdriver.ChromeOptions()\n    options.add_argument('--start-maximized')  # Maximize the browser window\n    driver = webdriver.Chrome(options=options)\n    driver.get(url)\n    # Wait for the page to load\n    time.sleep(2)\n    # Step 2: Open 5 new tabs\n    for _ in range(4):\n        driver.execute_script(\"window.open('about:blank', '_blank');\")",
         "detail": "autoclick",
         "documentation": {}
     },

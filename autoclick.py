@@ -2,10 +2,9 @@ import time
 import random
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
 from concurrent.futures import ThreadPoolExecutor
 
-def perform_test(url):
+def perform_test(url, iteration):
     options = webdriver.ChromeOptions()
     options.add_argument('--start-maximized')  # Maximize the browser window
 
@@ -30,14 +29,17 @@ def perform_test(url):
     driver.close()
 
     # Wait for a few seconds to see the result
-    # time.sleep(5)
+    time.sleep(5)
 
     # Close all browser windows
     driver.quit()
 
-if __name__ == "__main__":
-    url = "https://mihir-music.vercel.app/"  # Replace this with the URL you want to test
-    num_browsers = 5
+    print(f"Iteration {iteration} completed.")
 
-    with ThreadPoolExecutor(max_workers=num_browsers) as executor:
-        executor.map(perform_test, [url] * num_browsers)
+if __name__ == "__main__":
+    url = "https://example.com"  # Replace this with the URL you want to test
+    num_iterations = 500
+
+    with ThreadPoolExecutor() as executor:
+        tasks = [(url, i) for i in range(num_iterations)]
+        executor.map(lambda args: perform_test(*args), tasks)
