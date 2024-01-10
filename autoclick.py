@@ -6,23 +6,37 @@ from selenium.webdriver.common.action_chains import ActionChains
 from concurrent.futures import ThreadPoolExecutor
 
 def perform_test(url):
-    driver = webdriver.Chrome()  # You can use other browsers by changing this line accordingly
+    options = webdriver.ChromeOptions()
+    options.add_argument('--start-maximized')  # Maximize the browser window
+
+    driver = webdriver.Chrome(options=options)
     driver.get(url)
 
-    clickable_elements = driver.find_elements(By.XPATH, '//*[self::a or self::button]')
+    # Wait for the page to load
+    time.sleep(2)
 
-    selected_element = random.choice(clickable_elements)
+    # Step 2: Open 5 new tabs
+    for _ in range(4):
+        driver.execute_script("window.open('about:blank', '_blank');")
 
-    actions = ActionChains(driver)
-    actions.move_to_element(selected_element).perform()
+    # Step 3: Switch to each tab and navigate to the URL
+    for handle in driver.window_handles:
+        driver.switch_to.window(handle)
+        driver.get(url)
+        time.sleep(2)  # Wait for the page to load
 
-    selected_element.click()
+    # Step 4: Close the first tab (optional)
+    driver.switch_to.window(driver.window_handles[0])
+    driver.close()
 
+    # Wait for a few seconds to see the result
+    # time.sleep(5)
 
+    # Close all browser windows
     driver.quit()
 
 if __name__ == "__main__":
-    url = "http://localhost:3000/"  # Replace this with the URL you want to test
+    url = "https://mihir-music.vercel.app/"  # Replace this with the URL you want to test
     num_browsers = 5
 
     with ThreadPoolExecutor(max_workers=num_browsers) as executor:
